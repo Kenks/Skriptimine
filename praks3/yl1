@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# Kuupäeva skript
+#
+echo -n "Today is, "
+date +"%A, %B %d, %Y" 
+echo "Time is "$(date +"%H:%M")
+echo ""
+cal 
