@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# Minu muljed
+#
+echo -n "Kevin Jakovlev, "
+echo -n "IS118, "
+echo -n "Ei ole pädev selles, "
+echo -n "eks näis"
+echo "!"
+#
+# skriptilõpp
