@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+#
+#
+echo "Sisestage reisijate arv: "
+read reisijad
+echo "Sisestage kohtade arv: "
+read kohad
+bussid=$(expr "$reisijad" / "$kohad") #arvutab, mitu täiesti täidetud bussi kokku tuleb
+ylejaanud=$(expr "$reisijad" % "$kohad") #arvutab, kui palju reisijaid jääb maha
+echo "Täielikult täidetud busse on $bussid ja mahajäänuid on $ylejaanud" #näitab, mitu täis bussi kokku tuleb ja paljud peavad maha jääma
