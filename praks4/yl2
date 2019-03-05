@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+#tordi skript
+#
+echo "Sisestage aluskandiku pikkus cm-tes:"
+read pikkus
+echo "Sisestage aluskandiku laius cm-tes:"
+read laius
+echo "Sisestage küpsise laius cm-tes:"
+read kypsiselaius
+echo "Sisestage küpsise pikkus cm-tes:"
+read kypsisepikkus
+echo "Sisestage tordi kihtide arv:"
+read kihid
+echo "Sisestage mitu küpsist on pakis:"
+read pakis
+kandik=$(expr "$pikkus" \* "$laius") #arvutab aluse suurused
+kypsis=$(expr "$kypsiselaius" \* "$kypsisepikkus") #küpsise suuruse
+suurus=$(expr "$kandik" / "$kypsis") #mitu küpsist mahub alusele
+korgus=$(expr "$kihid" \* "$suurus") #mitu küpsist on vaja, et x arv kihte saada
+pakid=$(expr "$korgus" / "$pakis")  #mitu pakki küpsiseid on vaja muretseda
+echo "Teil läheb vaja: $pakid pakki küpsiseid" #näitab, mitu pakki küpsised läheb vaja
