@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# kolmnurga skript
+#
+echo "Sisesta a kylje vaartus: "
+read a
+echo "Sisesta b kylje vaartus: "
+read b
+aa=$(echo "$a" \* "$a" | bc) #arvutan a kylje ruutu
+bb=$(echo "$b" \* "$b" | bc) #arvutan b kylje ruutu
+cc=$(echo "$aa" + "$bb"| bc) #liidan molema kylje ruudud kokku
+vastus=$(echo "scale=3;sqrt($cc)" | bc) #votan ruutjuurde ja saan vastuse
+echo "$vastus"
