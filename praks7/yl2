@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# Kuu järgi aastaaja väljastus
+#
+echo -n "Sisesta kuu number: " #Tuleb sisestada vastav kuu number
+read kuu #Loeb sisestatud arvu tingimuseks
+if [ $kuu -eq 1 -o $kuu -eq 2 -o $kuu -eq 12 ] #Kui sisestatud arvu läheb kokku selles tingimusega, siis skript väljastab
+then
+	echo "Praegu on talv" #Väljastab, et kasutaja poolt sisestatud tingimus vastab talveks määratud tingimusega
+elif [ $kuu -ge 3 -a $kuu -le 5 ] #Tingimus, mis määrab kevad kuu arvud
+then
+	echo "Praegu on kevad" #väljastab, kui kasutaja poolt sisestatud tingimus vastab määratud tingimusele
+elif [ $kuu -ge 6 -a $kuu -le 8 ] #Tingimus, mis määrab suve kuu arvud
+then
+	echo "Praegu on suvi" #Väljastab, kui kasutaja poolt sisestatud tingimus vastab seatud tingimusega
+elif [ $kuu -ge 9 -a $kuu -le 11 ] #Tingimus, mis määrab sügis kuu arvud
+then
+	echo "Praegu on sügis" #Väljastab, kui kasutaja poolt sisestatud tingimus vastab määratud tingimusega
+else
+	echo "Antud kuu number puudub" #Väljastab, kui kasutaja poolt sisestatud arv ei lähe kokku tingimustega
+fi # Lõpetab skripti
