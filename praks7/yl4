@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# Aja järgi tervitamine
+#
+aeg=$(date +%H) #Skript võtab sisestatud ajaks masina kella järgi täistunni
+if [ $aeg -ge 6 -a $aeg -lt 12 ] #
+then #Väljastab sõnumi, aga lisab juurde kasutaja
+	echo "Tere hommikust, $(hostname)"
+elif [ $aeg -ge 12 -a $aeg -lt 18 ] #
+then #
+	echo "Tere päevast, $(hostname)"
+elif [ $aeg -ge 18 -a $aeg -lt 22 ] #
+then #
+	echo "Tere õhtust, $(hostname)"
+elif [ $aeg -ge 22 -a $aeg -le 24 ] #
+then #
+	echo "Head ööd, $(hostname)"
+elif [ $aeg -ge 0 -a $aeg -lt 6 ]
+then
+	echo "Head ööd, $(hostname)"
+else #Kui kasutaja sisestad vale arvu, siis skript teavitab teda vastava teatega
+	echo "Vale sisend"
+fi # lõpetab skripti
