@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+# Aja järgi tervitamine
+#
+echo -n "Sisesta aja väärtus: " #Kasutaja peab sisestama arvu 0-24
+read aeg #Skript loeb seda arvu, kui aeg
+if [ $aeg -ge 6 -a $aeg -lt 12 ] #kui sisestatud arv jääb 6 ja 11 vahele,
+then #Siis skript väljastab tere hommikust
+	echo "Tere hommikust"
+elif [ $aeg -ge 12 -a $aeg -lt 18 ] #kui sisestatud arv jääb 12 ja 17 vahele,
+then #siis skript väljastab Tere päevast
+	echo "Tere päevast"
+elif [ $aeg -ge 18 -a $aeg -lt 22 ] #kui sisestatud arv jääb 18 ja 21 vahele,
+then #siis skript väljastab tere õhtust
+	echo "Tere õhtust"
+elif [ $aeg -ge 22 -a $aeg -le 24 ] #kui sisestatud arv jääb 22 ja 5 vahele,
+then #siis skript väljastab head ööd
+	echo "Head ööd"
+elif [ $aeg -ge 0 -a $aeg -lt 6 ]
+then
+	echo "Head ööd"
+else #Kui kasutaja sisestad vale arvu, siis skript teavitab teda vastava teatega
+	echo "Vale sisend"
+fi # lõpetab skripti
