@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+#Vanuse skript
+#
+echo -n "Sisesta (oma) vanus: " #Palub sisestada positiivse arvu
+read vanus
+if [ $vanus -gt 0 -a $vanus -lt 11 ] #Tingimus, mis loeb 0 ja 11 vahel oleva arvu lapseks
+then
+	echo "Oled laps"
+elif [ $vanus -ge 11 -a $vanus -lt 18 ] # Tingimus, mis loeb 11 ja 18 vahel oleva arvu noorukiks
+then
+	echo "Oled nooruk"
+elif [ $vanus -ge 18 -a $vanus -lt 63 ] # Tingimus, mis loeb 18 ja 63 vahel oleva arvu täiskasvanuks
+then
+	echo "Oled täiskasvanu"
+elif [ $vanus -ge 63 ] # tingimus, kus arvud, mis üle 63 lähevad, sildistab vanuse seniooriks
+then
+	echo "Oled senioor"
+else
+	echo "Vale number"  # Tingimus, kus sisestatakse negatiivne number, siis skript ütleb kasutajale, et on sisestanud vale arvu
+fi # lõpetab skripti
