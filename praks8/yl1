@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+#Paarisarvude summa
+#
+summa=0
+for (( arv=1; arv<11; arv++ )) #Võtab arvud 1-10'ni
+do
+	jaak=$(($arv % 2)) #Iga arvutuse järgi on näha, kas mõnel arvul on jääk
+	if [ $jaak -eq 0 ]; then #Kui on jääk puudub, läheb arv järgmisesse valemisse
+		summa=$(($summa + $arv)) #siin arvutatakse kõik arvud kokku, millel puudus jääk
+		echo $summa #kokku tuleb summa
+	fi
+done
+echo "Arvude vahemikus 1 kuni 10 (kaasaarvatud) paarisarvude summa on: $summa"
