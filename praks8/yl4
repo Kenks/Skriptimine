@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+#algarvu skript
+#
+echo -n "Sisesta suvaline arv: " #Kasutaja peab sisestam suvalise arvu
+read arv
+if [ $arv -eq 0 -o $arv -eq 1 ] #Kui sisestatud arv on 0 või 1
+then
+	echo "$arv - ei ole algarv" #Siis teatab skript kasutajat sellise teatega
+else #kui arv on suurem kui 1, siis
+	jagaja=2
+	jaak=$(($arv % $jagaja)) #arvutab selle arvu jäägi
+	while [ $jaak -ne 0 ] #Kui jääk ei ole 0
+	do
+		jagaja=$(($jagaja + 1)) #siis liidab jagajale 1 juurde
+		jaak=$(($arv % $jagaja)) #ning arvutab uue jäägi
+	done
+	if [ $arv -eq $jagaja ] #Kui sisestatud arv on  võrdne jagaga
+	then
+		echo "$arv - on algarv" #teavitab skript kasutajat sellise teatega
+	else
+		echo "$arv - ei ole algarv" #kui ei, siis tuleb selline teade
+	fi
+fi
