@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+#Täisarv
+#
+echo -n "Sisesta suvaline täisarv: " #Palub kasutajal sisestada arvu
+read arv
+summa=0
+while [ $arv -ne 0 ] #kui arv ei ole 0
+do
+	jaak=$(($arv % 10)) #arvutab jäägi
+	summa=$(($summa + $jaak)) #liidab jäägi summaga
+	arv=$(($arv / 10)) #jagab arvu kümnega
+done
+echo "Sisestatud numbrite summa on: $summa" #lõpuks edastab kasutajale sellise teate
