@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+#Kuu määramine arvu järgi
+#
+echo -n "Sisesta kuu number: " #Skript palub kasutajal sisestada arvu 1-12'ni
+read kuu
+
+case $kuu in #Muudab kasutaja poolt sisestatud inputi üheks all olevaks lauseks
+	"1") echo "See kuu on jaanuar";;
+	"2") echo "See kuu on veebruar";;
+	"3") echo "See kuu on märts";;
+	"4") echo "See kuu on aprill";;
+	"5") echo "See kuu on mai";;
+	"6") echo "See kuu on juuni";;
+	"7") echo "See kuu on juuli";;
+	"8") echo "See kuu on august";;
+	"9") echo "See kuu on september";;
+	"10") echo "See kuu on oktoober";;
+	"11") echo "See kuu on november";;
+	"12") echo "See kuu on detsember";;
+	*) echo "Sisestasite vale numbri";; #Kui kasutaja sisestab numbri, mis ei kuulu vahemiku, siis annab skript talle sellest teada.
+esac
