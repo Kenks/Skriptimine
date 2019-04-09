@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+#tärni read
+#
+echo -n "Sisesta ridade arv: "
+read rida
+echo -n "Sisesta tarnide arv reas: "
+read tarn
+for (( i = 1; i <= $rida; i++ )) #arvutab, mitu rida peab tekkima
+do
+	for (( j = 1 ; j <= $tarn; j++ )) #arvutab mitu märki reas peab olema
+	do
+		echo -n "*" #Millised märgid peavad tekkima reale
+	done
+	echo "" #tekitab uue rea
+done
