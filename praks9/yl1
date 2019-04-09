@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+#tärni read
+#
+for (( i = 1; i <= 5; i++ )) #arvutab, mitu rida peab tekkima
+do
+	for (( j = 1 ; j <= 5; j++ )) #arvutab mitu märki reas peab olema
+	do
+		echo -n "*" #Millised märgid peavad tekkima reale
+	done
+	echo "" #tekitab uue rea
+done
